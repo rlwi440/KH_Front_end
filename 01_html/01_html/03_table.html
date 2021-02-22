@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        /*css작성*/
+        table {
+            border: 1px solid black;
+            /* 한줄로 생성가능*/
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table</h1>
+    <!--
+        table  table관련 최상위태그
+        thead|tbody|tfoot 행타입태그
+        tr 행 
+            th제목셀
+            th 내용셀
+    -->
+    <table>
+        <tbody>
+            <tr>
+                <th>브라우져명</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            </tr>
+            <tr>
+                <td>크롬</td>
+                <td>구글</td>
+                <td><a href="http://google.com">http://google.com</a></td>
+            </tr>
+
+            <tr>
+                <th>브라우져명</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            </tr>
+            <tr>
+                <td>크롬</td>
+                <td>네이버</td>
+                <td><a href="http://naver.com">http://naver.com</a></td>
+            </tr>
+            <tr>
+                <th>브라우져명</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            </tr>
+            <tr>
+                <td>사파리</td>
+                <td>애플</td>
+                <td><a href="http://apple.com">http://apple.com</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>총개수</td>
+            <td colspan="2">3</td>
+        </tfoot>
+
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th colspan="4">이력서</th>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" style="width: 150px; height: 150px;"><img src="./image/사진.jpg">
+
+            </td>
+            <td style="width: 80px;">
+                <p>이름:</p>
+            </td>
+            <td style="width: 200px;">배기원</td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td>010-0000-0000</td>
+        </tr>
+        <br>
+        <tr>
+            <td style="width: 70px;height: 50px;">주소</td>
+            <td colspan="3">경기도 광주시</td>
+        </tr>
+        <tr>
+            <td style="height: 300px;">자기소개</td>
+            <td colspan="3"> hi hello</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

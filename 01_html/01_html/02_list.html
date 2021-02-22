@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- html>head+body  몹시 중요하다 cd+tab-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록관련</title>
+</head>
+
+<body>
+    <h1>목록 관련</h1>
+    <li><a href="./index.html">돌아가기버튼</a></li>
+    <li><a href="./01_text.html">Text관련 버튼 </a></li>
+    <!--순서 없는목록 unodered-list -->
+    <!--<ul style="list-style-type: square">  -->
+    <ul style="list-style-type: square">
+        <li>css</li>
+        <li>html</li>
+        <li>java</li>
+    </ul>
+    <!-- 순서있는 목록 ordered-list -->
+    <ol>
+        <li>css</li>
+        <li>html</li>
+        <li>js</li>
+    </ol>
+    <!-- 중첩된목록 -->
+    <ol>
+        <li>안녕
+            <ul>
+                <li>hello</li>
+                <li>Ni~hao</li>
+            </ul>
+        </li>
+        <li>잘가
+            <ul>
+                <li>배기원
+                    <ul>
+                        <li>깔끔한청년</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>반가웠어 </li>
+    </ol>
+    <ul>
+        <ol>
+            <li>
+            <li><em>배기원</em></li>
+            </li>
+        </ol>
+    </ul>
+    </ol>
+    <!--ul>li>ol>li*2 순서 기억하기-->
+    <ul>
+        <li>
+            <ol>
+                <li></li>
+                <li></li>
+            </ol>
+        </li>
+    </ul>
+    <!-- ^의 부모태그로 올라가기-->
+    <!-- ul>li>ul>li*2^^li>ul>li -->
+    <ul>
+        <li>A
+            <ul>
+                <li>a1</li>
+                <li>a2</li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>b2</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- ^의 부모태그로 올라가기-->
+    <!-- ul>li>ul>li*2^li>ul>li -->
+    <!-- 차이 이해해보기 -->
+    <ul>
+        <li>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        <li>
+            <ul>
+                <li></li>
+            </ul>
+        </li>
+        </li>
+    </ul>
+    <dl>
+        <dt>제목</dt>
+        <dd>설명을 적으세요1</dd>
+        <dd>설명을 적으세요2</dd>
+        <dt>다른 제목</dt>
+        <dd>다른 설명을 적으세요1</dd>
+    </dl>
+
+</body>
+
+</html>
