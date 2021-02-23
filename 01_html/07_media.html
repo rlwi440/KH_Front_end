@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> 미디어 관련</h1>
+    <h2 style="color:aqua;">audio</h2>
+    <!-- autoplay :자동재생 
+        loop:반복재생
+        muted :음소거
+        preload:재생전에 미리 다운로드 할지(auto|metadate|none)
+        muted-->
+    <audio src="./audio/major.mp3" controls="controls" autoplay muted>
+        <!--fallback  -->
+        당신의 브라우져는 audio 태그를 사용할수 없습니다
+    </audio>
+    <!-- 여러개의 source 파일을 사용할수있다 -->
+    <audio controls>
+        <source src="./audio/major.mp3">
+        당신의 브라우져는 autio태그를사용할수없습니다
+    </audio>
+    <h2 style="color: cadetblue;">video</h2>
+    <!-- autoplay :자동재생 
+        loop:반복재생
+        muted :음소거
+        preload:재생전에 미리 다운로드 할지(auto|metadate|none)
+        widht| height
+        poster :비디오 재생전에 노출할 이미지-->
+    <video src="./video/small.mp4" controls autoplay muted></video>
+    <video controls>
+        <!-- web browser : mp4 -webm - ogg 순으로 재생
+        mobile :mp4-3gp 순으로 재생 -->
+        <source src="./video/small.webm" type="video/webm">
+        <source src="./video/small.ogv" type="video/ogv">
+        <source src="./video/small.mp4" type="video/mp4">
+    </video>
+    <h2 style="color: burlywood;">UX 디자인 문제해결의 좋은 예를 보여주는 프로젝트 </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/d8Yad0bmaPk" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+</body>
+
+</html>

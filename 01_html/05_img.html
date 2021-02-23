@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+    <link rel=" stylesheet" type="text/css" href="css/style.css">
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        button {
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        .image {
+            color: aqua;
+
+        }
+
+        .exe {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: blueviolet;">이미지관련</h1>
+    <img src="image/flower1.PNG" alt="꽃사진">
+    <br>
+    <hr>
+    <h2 style="color: blueviolet;"> 절대값 |상대값</h2>
+    <div>
+        <!--px픽셀 절대값이므로,화면(vieport)가 변해도 너비/높이가 변하지않는다-->
+        <img src="image/flower1.PNG" style="width:250px" alt="꽃사진" />
+        <img src="image/flower2.PNG" style="width:250px" alt="꽃사진" />
+        <img src="image/flower3.PNG" style="width:250px" alt="꽃사진" />
+        <img src="image/flower4.PNG" style="width:250px" alt="꽃사진" />
+    </div>
+    <hr>
+    <div>
+        <h2 style="color: pink;">상대값</h2>
+        <!--%는 상대값이므로 화면(viewport)대비 너비/높이값이 변한다-->
+        <img src="image/flower1.PNG" style="width:23%" alt="꽃사진" />
+        <img src="image/flower2.PNG" style="width:23%" alt="꽃사진" />
+        <img src="image/flower3.PNG" style="width:23%" alt="꽃사진" />
+        <img src="image/flower4.PNG" style="width:23%" alt="꽃사진" />
+    </div>
+    <hr>
+    <h3 style="color: brown;"> 이미지링크</h3>
+    <img src="image/tiger.jpg" alt="호랑이">
+    <button class="button"><a href=" http://w3schools.com">누르기 </a> </button>
+    <hr>
+    <h3 class="image"> image map</h3>
+    <img src="image/river1.PNG" style="width: 500px;" alt="두물머리사진" usemap="#mymap">
+    <map name="mymap">
+        <!--shape rect| circle|poly-->
+        <area shape="rect" coords="0,0,250,333" href="http://google.com" alt="구글이동">
+        <area shape="rect" coords="250,500,250,333" href="http://naver.com" alt="네이버이동">
+    </map>
+    <hr>
+    <h2 style="color: pink;">이미지배치 </h2>
+    <!--div>img+p>lorem*3-->
+    <!--float:left 옆에 신문 공간-->
+    <div>
+        <img src="image/forest1.PNG" style="float: left; width: 250px; height: 250px;">
+        <img src="image/flower1.PNG" style="float: right ; width: 250px;height: 250px;">
+        <p class=exe><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas maxime odit quisquam enim vitae
+                sapiente
+                quo eum fugit. Ex voluptas rerum quo ab voluptatum! Dignissimos odio soluta delectus quae
+                rem!</span><span>Ut beatae assumenda fugiat, voluptas error eligendi quaerat minus deserunt minima ipsam
+                ipsa architecto illum? Laboriosam adipisci et, repudiandae explicabo numquam dolorem quis voluptate,
+                molestias quidem perspiciatis aliquid, laborum iure.</span><span>Doloremque eum laudantium,
+                exercitationem incidunt cumque alias culpa officia minus error molestias facere deleniti vitae dolorum
+                veritatis dolorem expedita ad dicta odit, vel voluptates ullam quia fugit! Ratione, veritatis
+                repellat!</span><span>Asperiores esse modi delectus, quibusdam, cumque inventore quas, sed obcaecati
+                dolorem iure consequatur odio nostrum nisi quo. Similique, itaque! Explicabo sit facere doloremque amet
+                porro ad illum laborum obcaecati minus!</span><span>In itaque laudantium praesentium. Deserunt quibusdam
+                aut quia nisi esse placeat voluptatibus neque vitae doloremque libero, temporibus odio nostrum fugit.
+                Natus beatae temporibus eius consequuntur perspiciatis perferendis neque animi ea?</span><span>Voluptate
+                sint debitis quo quae adipisci similique perferendis saepe iusto ad enim recusandae, error nisi vel
+                distinctio quos repellat provident voluptatibus doloribus expedita magnam cumque. Nisi excepturi error
+                dolores mollitia!</span><span>Sunt distinctio amet, neque officia quia itaque praesentium optio
+                officiis! Atque repellat perferendis sunt illo facere, sit quasi maxime quae fugiat recusandae. Impedit
+                aut eum saepe minus ut? Necessitatibus, rem!</span><span>Officia laudantium quas numquam quod quaerat
+                iure possimus doloribus nostrum. Sequi, ut cumque quas sed quasi accusamus amet dolor! Dolore sequi
+                ipsam quas ab! Nesciunt esse facere nemo modi at!</span><span>Cupiditate, enim. Eos accusamus optio
+                dolor itaque dolores molestias cupiditate doloribus sed nesciunt delectus quia nostrum velit quibusdam
+                necessitatibus veritatis quam voluptatem pariatur, in ut sunt iste. Nobis, saepe
+                facilis!</span><span>Quidem, repudiandae? Accusamus, qui. Asperiores sint laborum ipsam hic veniam ullam
+                dignissimos eius, repellendus a, nisi recusandae iure, modi tempora nesciunt nemo ducimus praesentium
+                consectetur harum ipsa nihil atque. Repellendus!</span></p>
+    </div>
+
+</body>
+
+</html>
