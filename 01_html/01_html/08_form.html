@@ -152,6 +152,99 @@
                 <input type="range" name="userAmout" id="userAmout" max="100" min="1">
             </ul>
         </fieldset>
+        <h2 style="background-color: pink;">날짜/시간관련</h2>
+        <form action=" ">
+            <fieldset>
+                <!--날짜구간-->
+                <legend>날짜</legend>
+                <label for="birthday"> 생일:</label>
+                <input type="date" name="birthday" id="birthday" value="2020-01-01">
+                <br>
+                <!--시간 설정구간-->
+                <label for="reservation">예약: </label>
+                <input type="time" name="reservation" id="reservation">
+                <br>
+                <!--시간 날짜 설정구간-->
+                <label for="kakao-reserv">카카오 미용실 예약:</label>
+                <input type="datetime-local" name="kakao-reserv" id="kakao-reserv" width="100" ; height="15px"
+                    value="2020-01T13:30">
+            </fieldset>
+
+            <input type="submit" value="제출">
+        </form>
+        <h2 style="background-color: aqua;">라디오관련</h2>
+        <form action="">
+            <fieldset>
+                <legend>라디오 관련</legend>
+                <input type="radio" name="gender" id="gender_male" value="m">
+                <label for="gender_male">남</label>
+                <input type="radio" name="gender" id="gender_female" value="f">
+                <label for="gender_female">여</label>
+            </fieldset>
+            <input type="submit" value="제출">
+        </form>
+        <h2 style="background-color: bisque;">체크박스</h2>
+        <form action="">
+            <fieldset>
+                <legend>체크박스</legend>
+                <input type="checkbox" name="hobby" id="hobby-music" value="music">
+                <label for="hobby-music">음악감상</label>
+                <input type="checkbox" name="hobby" id="hobby-game" value="game">
+                <label for="hobby-game">게임</label>
+                <input type="checkbox" name="hobby" id="hobby-gym" value="gym">
+                <label for="hobby-gym">운동</label>
+                <label for="mailOK"> 메일수신</label>
+                <input type="checkbox" name="mailOK" id="mailOK">
+            </fieldset>
+            <input type="submit" value="제출">
+        </form>
+        <h2 style="background-color: palegreen;">option관련</h2>
+        <fieldset>
+            <legend>select</legend>
+            <label for="nation">국적:</label>
+            <select name="nation" id="nation" multiple>
+                <optgroup label="America">
+                    <!--optgroup-->
+                    <option value="usa">미국</option>
+                </optgroup>
+                <option value="kor">한국</option>
+                <!--미국 초기값 선언-->
+                <option value="usa" selected>미국</option>
+                <option value="jap">일본</option>
+                <option value="china">중국</option>
+            </select>
+            <br>
+            <!--detalist :select+input:text-->
+            <form action="">
+                <label for="menu">메뉴</label>
+                <input type="text" name="menu" id="menu" list="menu-list">
+                <detailst id="menu-list">
+                    <option value="된장찌개">된장찌개</option>
+                    <option value="김치찌개">김치찌개</option>
+                    <option value="순두부찌개">순두부찌개</option>
+                </detailst>
+        </fieldset>
+        </form>
+        <input type="submit" value="제출">
+        <br>
+
+        <h2 style="background-color: aquamarine;">컬러명</h2>
+        <form action="">
+            <fieldset>
+                <legend>기타</legend>
+                <label for="userColor">컬러:</label>
+                <input type="color" name="userColor" id="userColor" value="#FFFEFF">
+                <label for="upfile">파일업로드</label>
+                <input type="file" id="upfile" name="upfile">
+                <br>
+                <!--notVisible 안보이지만 전송가능?-->
+                <input type="hidden" name="notVisible" id="notVisible" value="나는 나다">
+                <input type="text" name="userId" id="userId" value="hoggd" disabled>
+            </fieldset>
+
+            <input type="submit" value="제출">
+        </form>
+
     </div>
 </body>
 
