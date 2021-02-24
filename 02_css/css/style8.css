@@ -1,16 +1,19 @@
-
+/* VW(Viewport Width) : 뷰포트 너비의 1% 길이와 동일합니다. */
 #sun{
-    width: 1800px;
-    height: 600px;
+    width: 100vw;
+    height: 20vw;
     background-color: lightgray;
     text-align: center;
 }
 div>img{
-    width: 500px;
-    height: 370px;
-    /* margin 90px (가로) 30px(세로)*/
-    margin: 90px 25px;
+    width: 25vw;
+    height: 15vw;
+    margin: 2.5vw 1vw;
 }
 div#sun>img:hover{
-box-shadow: 0px 0px 20px 10px grey;
+box-shadow: 0vw 0vw 0.3vw 0.1vw grey;
 }
+
+
+
+
