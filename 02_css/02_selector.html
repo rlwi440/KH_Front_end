@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_selector</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1 id=#h1>선택자</h1>
+    <div>
+        <ul>
+            <li id="li-htmk5">html5</li>
+            <li>css3</li>
+            <!--favor class는 그룹핑-->
+            <li id="li-js" class="favor">javaScript2015</li>
+            <li class="favor">python</li>
+            <li class="favor">node.js</li>
+            <li class="favor special">springFrameWork</li>
+        </ul>
+    </div>
+
+
+    <hr>
+    <!-- <div class="wrapper">
+        <h4>머릿글</h4>
+        <!--ul#first-ul>li*2-->
+    <!-- <ul id="first-ul">
+            <li>에라이1</li>
+            <li>에라이2</li>
+        </ul> -->
+    <div id="second-div">
+        <h4>머릿글 h4</h4>
+        <ul>
+            <li>에라이3</li>
+            <li>에라이4</li>
+        </ul>
+    </div>
+    </div> -->
+    <div class="container">
+        <!-- p#test${안녕}*5  -->
+        <p id="test1">안녕</p>
+        <p id="test2">안녕</p>
+        <p id="test3">안녕</p>
+        <p id="test4">안녕</p>
+        <p id="test5">안녕</p>
+        <pre id="pre-test6">안녕</pre>
+
+    </div>
+    <form action="">
+        <fieldset>
+            <legend>속성관련</legend>
+            <input type="text"><br>
+            <input type="text" name="user-name"> <br>
+            <input type="email" name="user-email"><br>
+            <input type="text" name="petname"><br>
+        </fieldset>
+    </form>
+
+    <h2>가상선택자</h2>
+    <div class="box Click">Click me!</div>
+    <div class="box over">커서를 이동하세요 </div>
+    <!--어떤사이트를 방문할때  -->
+    <a href="http://www.innerbody.com/htm/body.html">어떤 사이트 (방문전|방문후|커서|클릭)</a>
+    <!-- 문자수신 -->
+    <input type="checkbox" name="smsOK" id="smsOK">
+    <label for="smsOK">문자 수신</label>
+    <h2>구조선택자</h2>
+    <div class="test">
+        <pre>테스트1 </pre>
+        <p>테스트2 </p>
+        <p>테스트3 </p>
+        <p>테스트4 </p>
+        <p>테스트5 </p>
+        <p>테스트6 </p>
+        <p>테스트7 </p>
+        <p>테스트8 </p>
+        <p>테스트9 </p>
+        <pre>테스트10 </pre>
+    </div>
+    <h2>선택자 우선순위</h2>
+    <div class="app">
+        <div id="mydiv" class="test" style="background-color: coral;">우선순위테스트</div>
+    </div>
+
+
+</body>
+
+</html>

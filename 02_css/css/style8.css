@@ -1,0 +1,16 @@
+
+#sun{
+    width: 1800px;
+    height: 600px;
+    background-color: lightgray;
+    text-align: center;
+}
+div>img{
+    width: 500px;
+    height: 370px;
+    /* margin 90px (가로) 30px(세로)*/
+    margin: 90px 25px;
+}
+div#sun>img:hover{
+box-shadow: 0px 0px 20px 10px grey;
+}

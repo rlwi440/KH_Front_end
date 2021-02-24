@@ -1,0 +1,208 @@
+/*style태그없이 css코드만 작성
+id태그는 #으로 공통*/
+#text1{
+    background-color: darkcyan;
+    color: white;
+
+}
+   /*태그 선택자*/
+   li {
+    color: royalblue
+}
+
+h1 {
+    color: violet;
+    background-color: blue;
+}
+h2{
+    background-color: aqua;
+}
+
+
+/* 아이디 선택자*/
+#li-js {
+    font-size: 32px;
+    color: aquamarine;
+}
+
+/*클래스 선택자*/
+.favor {
+    background-color: pink;
+}
+
+/*복수개*/
+h1,
+.favor {
+    text-decoration: underline;
+}
+
+/* 복수개 이상의 클래스선택자*/
+.favor.special {
+    color: blue;
+    font-size: 48px;
+}
+
+/*자식태그 */
+.wrapper>h4{
+    background-color: blue;   
+}
+div.wrapper>#first_ul {
+    color: aquamarine;
+}
+
+.wrapper>#second-div {
+    color: blue;
+}
+
+
+/*후손태그 */
+div.wrapper h4 {
+    /*취소태그
+text-decoration: line-through;*/
+    text-decoration: line-through;
+}
+
+/*다음 형제요소 하나*/
+.container>#test2+p {
+    background-color: #f00;
+    color: #fff;
+}
+
+/*다음 형제요소 일치하는지 여부 ' ~ ' */
+.container>#test2~p {
+    font-size: 48px;
+}
+
+/*다음 형제요소 일치하는지 여부 ' ~ ' */
+.container>#test2 * {
+    font-size: 48px;
+}
+/*속성 선택자*/
+[name=user-name]{
+    background-color: hotpink;
+}
+[name=user-email]{
+    background-color: aqua;
+}
+/*포함*/
+[name*=er]{
+    background-color: aquamarine;
+}
+/*시작*/
+[name^=user]{
+    background-color: hotpink;
+}
+/*끝*/
+[name$=name]{
+    background-color: beige;
+}
+
+.box{
+    cursor: pointer;
+    border: 2px solid darkgrey;
+    margin: 10px;
+    padding: 10px;
+}
+/*클릭했을때*/
+.Click:active{
+    background-color: blue;
+    color: white;
+}
+/*커서안에 들어올때  dashed*/
+.over:hover{
+    color: red;
+    border: 2px dashed red;
+}
+/*링크 text-decoration 밑줄 없애기*/ 
+a:link{color: aqua;
+    text-decoration: none;
+}
+/*방문후 링크상태*/
+a:visited{
+    color: olive;
+
+}
+/*커서 text-decoration: underline; 밑줄체크 */
+a:hover{
+    text-decoration: underline;
+
+}
+/*클릭*/
+a:active{
+    color: tomato;
+
+}
+/*체크되면 200px*/
+input[type=checkbox]:checked {
+    width: 200px;
+    height: 200px;
+}
+/*체크되면 200px +label(font-size) 추가*/
+input[type=checkbox]:checked+label {
+    font-size: 96px;
+}
+/*p태그이면서 첫번째 자식인 태그*/
+/* .test:first-child{
+    background-color: teal;
+    color: white;
+} */
+ /* .test p:last-child{
+    background-color: blue;
+    color: white;
+} */
+/*1-based index 지정 가능*/
+/*특정2번째*/
+/* p:nth-child(2){
+    text-decoration: underline;
+}  */
+/*짝수*/
+/* p:nth-child(2n){
+    background-color: aquamarine;
+} */
+/*홀수*/
+/* p:nth-child(2n+1){
+    background-color: pink;
+} */
+/*p태그 중에서 첫번째 태그*/
+p:first-of-type{
+background-color: brown;
+}
+/*p태그 중에서 마지막 태그*/
+p:last-of-type{
+    background-color: chartreuse;
+}
+/*숫자중에 4번째*/
+p:nth-of-type(4){
+    background-color: slateblue;
+}
+/*부정선택자:not(선택자)*/
+/* .test>:not(p){
+    font-size: 48px;
+} */
+/*부정선택자:not(선택자)*/
+.test>:not(p:nth-of-type(4)){
+    font-size: 24px;
+}
+/*최종선택자*/
+/* :root{
+    background-color: magenta;
+} */
+
+
+/*태그 ->속성 ->클래스 ->아이디 ->인라인 속성 ->!important*/
+#mydiv{
+    background-color: thistle;
+}
+.test{
+    background-color: bisque;
+}
+
+.app .test{
+    font-size: 96px;
+}
+
+div{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+}
