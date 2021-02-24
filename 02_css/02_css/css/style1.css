@@ -1,0 +1,45 @@
+.ff0{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.wrapper{
+    font-size: 24px;
+}
+#ff1{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 32px;
+}
+#ff2{
+    /*em과 rem의 상속차이*/
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2em;
+}
+#ff3{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 150%
+}
+/*cascade 부모태그에  적용한 속성이 자식(후손)태그로 전이되어서 처리점*/
+/* body{
+    font-family: 'Nanum Gothic', sans-serif;
+} */
+ul{
+    font-weight: 200;
+
+}
+
+#li1{
+font-weight:200;
+font-size: 46px;
+}
+#li2{
+    font-weight: bold;
+    font-size: 46px;
+}
+/*bolder*/ 
+#li3{
+font-weight: bolder;
+font-size: 46px;
+}
+span#font{
+        /* font-style font-variant font-weight font-size/line-height font-family */
+        font: italic bold 24px/30px 'Noto Sans KR'
+}
