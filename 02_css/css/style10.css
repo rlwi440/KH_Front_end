@@ -1,0 +1,36 @@
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #000;
+    color: #fff;
+  }
+  .box1 {background-color: lightseagreen;}
+  .box2 {background-color: lightskyblue;}
+  .box3 {background-color: lightsteelblue;}
+  .box4 {background-color: lightblue;}
+  .box5 {background-color: lightcyan;}
+  
+  .inline {
+    display: inline;
+  }
+  .inline-block {
+    /* block처럼 width/height 적용. inline요소처러 한행으로 배치 */
+    display :inline-block;
+  }
+/*block은 한줄로 연결가능하다.*/
+  .block {
+    display: block;
+  }
+  /*공간이 사라진다.*/
+  .display-none {
+    display: none;
+  }
+  /*요소가 보이지 않지만 여전히 그공간을 차지하며 투명하게 남는다*/ 
+  .visibility-hidden {
+    visibility: hidden;
+  }
+  /*	요소가 완전히 투명해 보이지 않음.*/
+  .opacity-0 {
+    opacity: 0; 
+  }
+

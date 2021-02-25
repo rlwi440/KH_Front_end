@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style11.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h1>position</h1>
+    <!-- static 기본값. 문서내 작성된 순서대로 배치. offset값 무시
+     relative 문서내 작성된 순서대로 offset 적용.
+     absolute 가장가까운 position relative부모요소 기준으로 offset값 적용
+     fixed viewport기준으로 offset값 적용   -->
+    <h2>static</h2>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+    <h2>relative</h2>
+    <div class="outer">
+        <div class="first"></div>
+        <div class="second position-relative"></div>
+        <div class="third position-relative"></div>
+    </div>
+    <h2>absolute</h2>
+    <div class="outer position-relative">
+        <div class="first"></div>
+        <div class="second position-absolute"></div>
+        <div class="third position-absolute"></div>
+    </div>
+    <h2>fixed</h2>
+    <div class="third position-fixed"></div>
+    <h2>z-index</h2>
+    <!-- z축기준으로 요소를 배치.postition:static 에서는 사용불가 -->
+    <!-- z-index가 명시되지 않으면, 문서상 나중에 작성된 것이 Z-index가 더높다 -->
+    <!-- div.wrapper>.box.box${테스트$}*3 -->
+    <div class="wrapper position-relative">
+        <div class="box box1 position-absolute">테스트1</div>
+        <div class="box box2 position-absolute">테스트2</div>
+        <div class="box box3 position-absolute">테스트3</div>
+    </div>
+</body>
+
+</html>

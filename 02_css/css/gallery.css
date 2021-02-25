@@ -1,0 +1,27 @@
+#gallery li img.pic{
+    display: none;
+    position: absolute;
+    margin: 10vw 15vw;
+}
+#gallery img.small:hover+img.pic{
+    border: 3px solid black;
+    display: block;
+    width: 25vw; 
+    height: 15vw;
+}
+
+#gallery ul {
+    background-color: rgba(0, 0, 0, 0.739);
+    border: 0.7vw solid black;
+    padding-top:  3vw;
+    padding-right: 2vw;
+    width: 32vw;
+    height:15vw;
+    /*margin block요소에서 가운데를 맞춰줘야 한다.*/
+    margin: 0 auto;
+    text-align: center;
+}
+#gallery ul li{
+   display: inline-block;
+    list-style: none;
+}
