@@ -1,0 +1,79 @@
+.img-wrapper {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid gray;
+    overflow: hidden;
+  }
+  .img-wrapper img {
+    width: 100%;
+    transition: .8s;
+  }
+  .img-wrapper:hover img {
+    transform: scale(1.2, 1.2);
+  }
+
+.title{
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+    padding: 30px;
+    background-color: #99aeff;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0);
+    color: #fff;
+    overflow: hidden;
+    display: inline-block;
+}
+.title h1{
+    font-weight: 200;
+    text-shadow: 2px 2px 10px rgba(0,0,0,4);
+}
+.title h2{
+    font-weight: 200;
+    margin: 20px 0 0 0;
+    font-style: italic;
+    transform: translateX(380px);
+}
+.title p{
+    font-weight: 200;
+    margin: 20px 0 0 0;
+    transform: translateX(-380px);
+    transition-delay: .2s;
+}
+.text-transition{
+    opacity: .2;
+    transition:  all .6s ease-out;
+}
+.title:hover{
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0);
+}
+.title:hover .text-transition{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.transition {
+    transition-duration: 1s;
+    /*trasition 적용할 속성.기본값 all*/
+    transition-property: all;
+    transition-delay: 5s;
+  }
+.transform-rotate:hover {
+    /* 시계방향으로 회전 */
+    transform : rotate(390deg);
+  }
+  .transform-scale:hover {
+    transform: scale(1.5, 1.5);
+  }
+
+  .transform-translate:hover{
+    /* 하나의 상태를 표현 */
+    /* transform: translateX(50px); */
+    /* transform: translateY(50px); */
+    transform: translate(50px, 50px);
+  }
+.wrapper{
+    text-align: center;
+}
+.wrapper img{
+    width: 250px;
+}

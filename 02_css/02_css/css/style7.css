@@ -1,0 +1,25 @@
+#menu{
+    /*none 목록을 없애는 */
+    list-style-type: none;
+    padding-left: 0px;
+    width: 450px;
+    margin: 0 auto;
+}
+nav{
+    height: 30px;
+    background-color: aquamarine;
+    padding: 5px 0;
+}
+ul#menu li{
+    /*수중고리게임*/
+    float: left;
+    /*오른쪽공간 스페이스바*/
+    margin-right: 15px;
+}
+ul#menu li:hover{
+    border-bottom: 4px solid lightslategray;
+    text-shadow: 2px 2px 3px lightgray;
+}
+ul#menu a{
+    text-decoration: none;
+}
