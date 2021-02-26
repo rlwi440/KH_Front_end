@@ -1,0 +1,78 @@
+/*전체지정헤주는영역*/
+div{
+    /*상단바 크기 조정 구간*/
+    padding: -13px;
+}
+#section{
+    padding: +13px;
+}
+
+
+div#wrapper{
+    background-color: #F0F0F0;
+    width: 960px;
+    margin: 0 auto;
+}
+/*상단바 헤더부분 영역색깔지정*/
+header{
+    background-color: deeppink;
+    /*height부분 색깔지정 구역나누기*/
+    height: 7vw;
+    transform: translateY(-10px);
+
+}
+h2{
+    color: blue;
+    transform: translateY(+20px);
+}
+ nav{
+     /*header부분역할지정*/
+     float: right;
+     margin-bottom: 10px;
+ }
+ nav ul li{
+     list-style: none;
+     /*한줄한행 역할 지정 */ 
+     float: left;
+ }
+    /*가상클래스구간지역*/ 
+ nav ul li:not(:last-of-type)::after{
+    content: "/";
+}
+li a{
+    /* 밑줄없애기*/
+    text-decoration: none;
+    /* 간격사이 */
+    padding:  0 0.5vw;
+    /*글자 색깔지정*/
+    color:aquamarine;
+}
+li a:hover{
+    color: blue;
+}
+section#section{
+    background-color:aquamarine;
+    float: left;
+    width: 59vw;
+    height: 45.5vw;
+    
+}
+aside{
+    background-color:#DCDAD9; 
+    float:right; 
+    width:37.5vw;
+    height:47vw; 
+}
+footer{
+    background-color: #555555;
+    /*모두 줄바꿈상태 가능 하다 /*/
+    clear: both;
+    text-align: center;
+    padding-bottom: 25px;
+}
+footer h3{
+    /*text-align: left 왼쪽으로 이동가능하다;*/
+    text-align: left;
+}
+
+

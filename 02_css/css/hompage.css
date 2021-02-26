@@ -1,0 +1,53 @@
+  div, section, header, aside, footer {
+    padding:10px;
+  }
+  div#container	{ 
+    background-color:#F0F0F0; 
+    width:960px; 
+    margin:0 auto;
+  }
+  header {
+    background-color:#908886; 
+    height:100px; 
+  }
+  nav{
+      float: right;
+      margin-bottom: 10px;
+      transform: translateY(-10px);
+  }
+  nav ul li{
+      list-style: none;
+      float: left;
+  }
+  nav ul li:not(:last-of-type)::after{
+      content: "|";
+}
+li a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: #000;
+}
+li a:hover{
+    color: #fff;
+}
+  section#content	{
+    background-color:#F5F5F5; 
+    float:left; 
+    width:640px;
+    height:500px; 
+  }
+  aside {
+    background-color:#DCDAD9; 
+    float:right; 
+    width:280px; 
+    height:500px; 
+  }
+  footer {
+    background-color:#555555; 
+    clear:both;  
+    text-align:center;
+    padding-bottom: 30px;
+  }
+  footer h3	{
+    text-align: left;
+  }
