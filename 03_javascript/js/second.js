@@ -35,7 +35,7 @@ function test1() {
     };
     console.log(i, typeof (i));
     console.log(i(3, 7));
-    i = new Date();
+    i = new Date(); //생성자 함수를 호출
     console.log(i, typeof (i));
     i = function (x, y) {
         return x * y;
