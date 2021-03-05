@@ -108,7 +108,6 @@ var test5 = function () {
 
 /**
  * 한번더 연습해보기 
- * 
  */
 var displayDateTime = function (dt) {
     var yyyy = dt.getFullYear();
@@ -125,6 +124,6 @@ var displayDateTime = function (dt) {
 };
 
 var get2digit = function (n) {
-    // return n.toString().padStart(2,'0');
-    return n < 10 ? '0' + n : n;
+    return n.toString().padStart(2, '0'); //2 가 자릿수 
+    //return n < 10 ? '0' + n : n;
 };
