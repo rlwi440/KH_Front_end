@@ -163,18 +163,17 @@ var test9 = function () {
     var arr = [];
     // arr.push(1);
     // arr.push(2);
-    // arr.push(3);
+    // arr.push(3)
+    ;
 
     var k = 1;
     while (true) {
         arr.push(k++);
         if (k > 100) break;
     }
-
     //마지막요소 제거 : 제거된 요소 리턴
     // console.log(arr.pop());
     // console.log(arr.pop());
-
     var copy = [];
     var k = 1;
     while (true) {
@@ -182,7 +181,6 @@ var test9 = function () {
         if (++k > 100) break;
     }
 }
-
 var test10 = function () {
     var arr = ['사과', '배', '아보카도'];
     arr.unshift('감자');
@@ -229,13 +227,73 @@ var test12 = function () {
  * 예) 농구,수영 ,캠핑,낚시
  * ,구분자로 잘라서 배열로 담은후, 사전순 정렬이후 ,ul#hobby-list의 자식li태그 로 추가하세요
  */
-function test13() {
-    var input = prompt("나의 취미생활은?");
-    var arr = input.split(",");
-    arr.sort;
-    var ul = document.getElementById("hobby-list");
-    ul.innerHTML = "";
-    arr.forEach(function (item) {
-        ul.innerHTML += "<li>" + item + "</li>";
+
+/**
+ * prompt를 이용해 사용자의 취미리스트를 입력받으세요.
+ * 예) 농구,수영,캠핑,낚시
+ * ,구분자로 잘라서 배열로 담은후, 
+ * 사전순 정렬이후, ul#hobby-list의 자식li태그로 추가하세요.
+ */
+var test13 = function () {
+    var hobbies = prompt("취미를 입력하세요. 예)농구,수영,캠핑,낚시");
+
+    // null, "" 일때는 조기리턴처리
+    if (!hobbies) {
+        alert("입력값이 유효하지 않습니다.");
+        return;
+    }
+
+    var arr = hobbies.split(",");
+    arr.sort();
+    console.log(arr);
+
+    var result = document.querySelector("ul#hobby-list");
+
+    //배열 요소마다 콜백함수를 실행
+    //f("농구", 0)
+    //f("수영", 1)
+    //f("캠핑", 2)
+    //f("낚시", 3)
+    arr.forEach(function (food, idx) {
+        result.innerHTML += "<li>" + food + "</li>";
     });
-}
+
+};
+
+
+/**
+ * arr.forEach (callback function(element,index){
+ * //요소마다 실행구문
+ * })
+ * 
+ * 유사배열도 사용가능
+ */
+
+var test14 = function () {
+    var arr = [1, 2, 3, 4, 5];
+    var sum = 0;
+    arr.forEach(function (elem, i) {
+        console.log(i, elem);
+        sum += elem;
+    });
+    // alert(sum);
+
+    var btnValues = [];
+    document.querySelectorAll("input[type=button]").forEach(function (elem, i) {
+        console.log(i, elem);
+        btnValues.push(elem.value);
+    });
+    console.log(btnValues);
+
+};
+
+
+var test15 = function () {
+    var drinks = [];
+    /**배열요소*/
+    document.querySelectorAll("li").forEach(function (elem, i) {
+        drinks.push(elem.innerHTML);
+        //읽어오기
+    });
+    console.log(drinks);
+};
