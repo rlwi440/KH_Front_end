@@ -83,6 +83,7 @@ function koo() {
 function test4(a, b) {
     function power(n) {
         return n ** 2;
+        //** check
     }
     //제곱근 구하기
     c = Math.sqrt(power(a) + power(b));

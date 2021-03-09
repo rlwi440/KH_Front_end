@@ -16,6 +16,7 @@
 	<button onclick="funcY()(999);">funcY 실행확인</button>
 	<button onclick="funcZ(3)(5);">funcZ 실행확인</button>
 	<button onclick="funcZ()(5);">funcZ 실행확인</button>
+	<!--NAN-->
 	<script>
 		//클로져함수의 변수출력
 		var a = 1;
@@ -52,7 +53,7 @@
 			var sum = 0;
 			//지역변수
 			return function () {
-				var num = document.getElementById('myadder').value;
+				var num = document.getElementById('myadder').value; //자유변수
 				//Number 가능
 				num = parseInt(num);
 				sum += num;
