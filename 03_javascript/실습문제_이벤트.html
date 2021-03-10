@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-실습문제-이벤트</title>
+</head>
+
+<body>
+    <h1>@실습문제_이벤트</h1>
+    <!--
+    #btn-generate을 클릭하면, 
+    아래데이터를 javascript객체로 먼저 만들고, 배열로 관리한다.
+    배열을 순회하면서, button태그를 동적으로 생성한다.
+    생성된 버튼태그를 클릭하면, 각각의 url로 페이지이동해야한다.
+    버튼 value       이동할 url
+    ---------------------------------
+    네이버            https://www.naver.com
+    구글                https://www.google.com
+    KH                https://www.iei.or.kr
+    와삼              https://www.w3schools.com
+ -->
+
+    <!-- /**
+                     *1. onkeydown
+
+                        - 키를 눌렀을 때 발생
+
+                        - 물리키에 반응
+
+                        - 현재 눌린 문자와는 상관없이 물리적인 키에만 반응
+                        2. onkeyup
+                        - 키를 떼었을 때 발생     
+                        3. onkeypress
+                        - 키를 눌렀을 때 발생
+
+                        - 현재 눌린 문자에 반응
+                        - 문자 키에 반응
+             1. onmouseover : 해당 객체의 영역위에 커서가 진입하는 순간 발생
+             *2. onmouseout  : 해당 영역에서 커서가 빠져나가는 순간 발생
+             3. onmousedown : 해당 객체의 영역에서 마우스 버튼이 눌려지는 순간 발생
+             4. onmouseup   : 해당 객체의 영역에서 마우스 버튼이 떼는 순간 발생
+             5. onmousemove : 해당 객체의 영여겡서 커서가 움직이는 순간 발생 
+
+                     */
+                     -->
+    <button type="button" class="btn-generate">버튼생성</button>
+    <div class="btn-wrapper">
+    </div>
+    <script>
+        window.onload = () => {
+            var btn = document.querySelector(".btn-generate").onmouseout = function () {
+                var arr = [new link('네이버', 'https://www.naver.com'),
+                    new link('구글', ' https://www.google.com'),
+                    new link('kH', 'https://www.iei.or.kr'),
+                    new link('와삼 ', 'https://www.w3schools.com')
+                ];
+
+                function link(name, url) {
+                    this.name = name;
+                    this.url = url;
+                }
+                var str = document.querySelector(".btn-wrapper");
+
+                for (var i in arr) {
+                    var btn = document.createElement("button");
+                    btn.innerHTML = arr[i].link;
+                    btn.url = arr[i].url;
+                    btn.onkeyup = function () {
+                        open(this.url, "Window"); //이름지정
+                    };
+                    str.appendChild(btn);
+
+                }
+
+            };
+        }
+    </script>
+
+
+</body>
+
+</html>
