@@ -18,7 +18,7 @@
     </script>
 </head>
 
-<body>
+<body data-text="body" onclick="displayMsg(this);">
     <h1>Event</h1>
     <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">W3Schools - HTML DOM Events</a>
     <h2>Event Handler Binding</h2>
@@ -42,13 +42,30 @@
     <h2>Event | Event Target</h2>
     <div class="box" onclick="test2(event);"></div>
     <style>
-        .box {
+        /* .box {
             width: 100px;
             height: 100px;
             border: 3px solid #000;
             background: tomato;
             text-align: center;
             padding: 20px;
+        }
+         */
+        .box {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+
+        .box1 {
+            background-color: yellowgreen;
+        }
+
+        .box2 {
+            background-color: green;
+        }
+
+        .box3 {
+            background-color: springgreen;
         }
     </style>
     <script>
@@ -152,8 +169,32 @@
             return true;
         };
     </script>
+    <h2>Event-Propagation- Bubling</h2>
+    <div class="box box1" data-text="box1" onclick="displayMsg(event,this);">
+        <div class="box box2" data-text="box2" onclick="displayMsg(event,this);">
+            <div class="box box3" data-text="box3" onclick="displayMsg(event,this);">
 
+            </div>
 
+        </div>
+    </div>
+    <script>
+        function displayMsg(e, box) {
+            console.log(box.dataset.text); //기본적인 전파역할
+            /**
+             * 자식요소로 전파 된다
+             */
+            //전파방지
+            e.stopPropagation();
+            //preventDefault  는 action을 유지 
+            //첫번째 click 이벤트를 실행합니다. 두번째는 브라우저에게 href 에 표시된 곳으로 이동하도록 합니다.
+        }
+        // document.querySelectorAll(".box").forEach(function (box, i) {
+        //     box.addEventListener('click', function (e) {
+        //         console.log(e.target.dataset.text)
+        //     });
+        // });
+    </script>
 
 
 

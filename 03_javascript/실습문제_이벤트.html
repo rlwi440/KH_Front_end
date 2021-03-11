@@ -23,8 +23,8 @@
     와삼              https://www.w3schools.com
  -->
 
-    <!-- /**
-                     *1. onkeydown
+    <!-- 
+                     1. onkeydown
 
                         - 키를 눌렀을 때 발생
 
@@ -48,8 +48,22 @@
                      -->
     <button type="button" class="btn-generate">버튼생성</button>
     <div class="btn-wrapper">
+        <!--data-url -->
+        <button type="button" data-url='https://www.naver.com'>네이버</button>&nbsp;
+        <button type="button" data-url='https://www.google.com'>구글</button>&nbsp;
+        <button type="button" data-url='https://www.iei.or.kr'>KH</button>&nbsp;
+        <button type="button" data-url='https://www.w3schools.com'>와삼</button>
     </div>
     <script>
+        // 변수 선언 방식이 let 과 const 이다.
+        let btns = document.querySelectorAll(".btn-wrapper button");
+        // console.log(btns);
+        btns.forEach(function (btn, i) {
+            // console.log(btn.dataset); //url 입력가능 
+            btn.addEventListener('click', function () {
+                open(btn.dataset.url, "");
+            });
+        });
         window.onload = () => {
             var btn = document.querySelector(".btn-generate").onmouseout = function () {
                 var arr = [new link('네이버', 'https://www.naver.com'),
@@ -66,15 +80,14 @@
 
                 for (var i in arr) {
                     var btn = document.createElement("button");
+                    var btn2 = document.createTextNode("click");
                     btn.innerHTML = arr[i].link;
                     btn.url = arr[i].url;
                     btn.onkeyup = function () {
                         open(this.url, "Window"); //이름지정
                     };
                     str.appendChild(btn);
-
                 }
-
             };
         }
     </script>
