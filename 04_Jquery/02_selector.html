@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.js"></script>
+    <title>jQuery-selector</title>
+</head>
+
+<body>
+    <h1>selector</h1>
+    <ul>
+        <li class="foo" id="bar1">안녕1</li>
+        <li class="foo" id="bar2">안녕2</li>
+        <li class="foo" id="bar3">안녕3</li>
+        <li id="bar4">안녕4</li>
+        <li id="bar5">안녕5</li>
+    </ul>
+    <!-- input:b button 형식가능 -->
+    <input type="button" value="tag" onclick="test1()">
+    <script>
+        /**
+         * tag
+         * class
+         * id
+         */
+        function test1() {
+            // let $lis = $("ul>li");
+            // console.log($lis); //jquery 객체
+            // $lis.css("background", "deeppink");
+            // let s = document.querySelector('ul');
+            // s.style.background = "deeppink";
+            // $(".foo").css("font-size", "2em"); //font-size 2em 2배
+            let $bar1 = $("#bar1");
+            let $bar1_;
+            console.log($bar1);
+            console.log($bar1_ == $bar1_); //true
+            console.log($("#bar1").css("text-decoration", "underline")); //CSS함수의 리턴값
+            //method chaining 동일한 요소에서 여러 jQuery 명령을 차례로 실행할 수있는 연결이라는 기술이 있습니다. w3schools 
+            $("#bar1").css("font-size", "3em")
+                .css("background-color", "deeppink")
+                .css("color", "#fff");
+        }
+    </script>
+    <!-- fieldset>legend{메뉴} -->
+    <fieldset>
+        <legend>메뉴</legend>
+        <!-- (input:checkbox[name=menu]#menu$+label[for=menu$])*4 -->
+        <input type="checkbox" name="menu" id="menu1" value="햄버거"><label for="menu1">햄버거</label>
+        <input type="checkbox" name="menu" id="menu2" value="핫도그"><label for="menu2">핫도그</label>
+        <input type="checkbox" name="menu" id="menu3" value="피자"><label for="menu3">피자</label>
+        <input type="checkbox" id="menuAll"><label for="menuAll">전체선택/해제</label>
+        <input type="button" value="getter|setter" id="checkGetset">
+        <input type="button" value="확인" id="checkValue">
+
+    </fieldset>
+    <script>
+        console.log($("[name=menu]")); //속성값 
+        console.log($("[name]")); //속성을요소전체
+        console.log($("[type=checkbox")); //checkbox
+        console.log($(":checkbox")); //jquery에서만 사용가능
+        let $menus = $("[name=menu]");
+        let $menuAll = $("#menuAll");
+        $menuAll.click(function () { //click 여부검사
+            if (this.checked) { //. checkbox checked 여부 : 검사
+                $menus.prop("checked", true);
+            } else {
+                $menus.prop("checked", false);
+            }
+        });
+        //jquery 이벤트핸들링 
+        $("[name=menu]").change(function (e) {
+            /**
+             * JS 객체
+             */
+            // console.log(e);
+            // console.log(e.target);
+            // console.log(this.checked);       //checked객체
+            /**
+             * Jquery 객체
+             */
+            console.log($(this).prop("checked")); //jquery객체 getter
+            $(e.target).prop("checked", false); //체크결정 권한이유 target 
+            //value객체 
+            console.log($(e.target).val()); //
+        });
+        /**
+         * #checkGetSet click event handling
+         * 복수개의 요소를 가진 jquery객체
+         * - getter 첫번째인자의 속성값 리턴
+         * - setter 모든 인자의 속성값에 적용
+         */
+        $("#checkGetSet").click(function () {
+            // console.log($("[name=menu]").prop("checked")); // getter
+            console.log($("[name=menu]").prop("checked", true)); // setter
+        });
+    </script>
+
+    <img src="image/flower1.png" alt="" style="margin: 50px 20px; width:300px;">
+    <script>
+        /**
+         * attr
+         * html 태그상에 기록된 속성을 가져오거나 설정할 경우
+         */
+        /**
+         *
+         * attr() 사용시 
+        ㆍ HTML attribute 값이 모두 String 으로 넘어옴
+        prop() 사용시 
+        ㆍ 자바스크립트의 프로퍼티 값이 넘어오기 때문에 boolean, date, function 등도 가져올 수 있음     
+         */
+        $("img").click(function () {
+            console.log($(this).attr("src", "image/flower2.png"));
+        });
+    </script>
+    <script>
+        $("#checkValue").click(function () {
+            // jquery객체 요소 순회
+            // $("[name=menu]").each(function(index, elem){
+            //   // console.log(index, elem); // elem 순수 js tag객체
+            //   var $elem = $(elem);
+            //   if($elem.prop("checked"))
+            //     console.log($elem.val());  
+            // });
+            $("[name=menu]:checked").each(function (index, menu) {
+                console.log(menu.value);
+                console.log($(menu).val());
+            });
+        });
+    </script>
+    <div class="wrapper">
+        <p>안녕1</p>
+        <p>안녕2</p>
+        <p>안녕3</p>
+        <p>안녕4</p>
+        <p>안녕5</p>
+        <p>안녕6</p>
+        <p><a href="#">안녕7</a></p>
+        <p>안녕8</p>
+        <p>안녕9</p>
+        <p>안녕10</p>
+    </div>
+    <input type="button" value="eq()" onclick="test2()">
+    <input type="button" value=":gt() :lt()" onclick="test3()">
+    <input type="button" value=":contains()" onclick="test4()">
+    <input type="button" value=":has()" onclick="test5()">
+    <input type="button" value=":not()" onclick="test6()">
+    <script>
+        function test6() {
+            /**
+             *첫번째요소가 아닌것들만 
+             */
+            $(".wrapper p:not(:first-child)").css("background-color", "deeppink");
+        }
+        /**
+         * :has(selector)
+         * 하나 선택자 
+         */
+        function test5() {
+            $(".wrapper p:has(a)").css("background-color", "lightgray");
+        }
+        /**
+         * :contains() 
+         * 특정 text를 가진 태그조회
+         */
+        function test4() {
+            $(".wrapper p:contains('안녕8')").css("text-decoration", "line-through");
+        }
+        /**
+         * :gt(index)
+         * :lt(index)
+         */
+        function test3() {
+            $(".wrapper p:gt(3)").css({
+                "font-size": "2em",
+                "color": "deeppink"
+            });
+        }
+        /**
+         * :eq(index)
+         */
+        function test2() {
+            $(".wrapper p:eq(3)").css("font-size", "2em")
+                .css("color", "deeppink");
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -70,7 +70,7 @@ let str = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[
 console.log(str.test(email)); // true
 
 let targetStr = 'abc#123';
-// let num = /[^A-Za-z0-9]/gi;
+let num = /[^A-Za-z0-9]/gi;
 // 특수 문자를 선택적으로 검사 문제
-let num = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
+// let num = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi;
 console.log(num.test(targetStr));

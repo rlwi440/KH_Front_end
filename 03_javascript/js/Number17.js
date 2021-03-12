@@ -252,3 +252,20 @@ function test12() {
         console.log(/ /.test(s)); // false
     });
 }
+/**
+ * Look Around:문자열 검사후 최종패턴에는 포함되지않는다.
+ * -000(?=(re)):000다음 re 일치
+ * -000(?!(re)):000다음 re일치하지 않아야함. 000만 최종반환
+ * 2.look behind (re):000다음 re일치 .000만 최종반환
+ * -(?<=(re))000: 000이전 re 일치  .000만 최종반환 
+ * -(?<!(re))000: 000이전 re 일치하지않아야함. 000만 최종반환
+ * 
+ */
+function test13() {
+    var s = "hello world hello Tom hello Jane";
+    // area.innerHTML = s.replace(/hello(?=( world))/g, '<mark>$&</mark>');
+    // area.innerHTML = s.replace(/hello(?!\sworld)/g, '<mark>$&</mark>');
+    s = "hello world lotte world t world";
+    // area.innerHTML = s.replace(/(?<=hello )world/g, '<mark>$&</mark>'); //나오는것
+    area.innerHTML = s.replace(/(?<!hello )world/g, '<mark>$&</mark>'); //아닌것은
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery-hello</title>
+    <!-- 1.서버컴퓨터에 다운로드 후 , 현재페이지 loading& 실행 -->
+    <!-- 2.CDN content Delivery Network 인터넷상의 서버에서 직접 다운로드  방식  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <!-- CDN Script  -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+
+    <script>
+        //식별자 사용할때 @ ,jquery 사용가능
+        //jquery load함수 1
+        //Uncaught ReferenceError: jQuery is not defined 쉽게 자주 나오는 오류 
+        jQuery(document).ready(function () {
+            alert("jquery를 load 했습니다");
+        });
+        //jquery load 함수 2
+        $(function () {
+            // alert("jquery를 load했습니다.")
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
