@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-filter</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <h1>Filter</h1>
+    <input type="button" value="Filter" onclick="test1()">
+    <input type="button" value="first|last|eq|not" onclick="test2()">
+    <div class="wrapper">
+        <p class="test">안녕11</p>
+        <p class="test">안녕22</p>
+        <p class="test">안녕33</p>
+        <p class="test">안녕44</p>
+        <p class="test">안녕55</p>
+        <p class="test">안녕66</p>
+        <p class="test">안녕77</p>
+        <p>안녕8</p>
+        <p>안녕9</p>
+        <p>안녕10</p>
+    </div>
+    <script>
+        /**
+         * filter(selector)
+         * 현재 jquery객체의 요소중에 seletor에 부합하는 요소만 추려서 다시 jquery객체로 반환.
+         */
+        function test1() {
+            var $p = $(".wrapper > p");
+            // console.log($p);
+            // console.log($p.filter(".test"));
+
+            // $p.filter(".test")
+            // $p.filter(":odd") // 홀수 인덱스 요소만 0 1 3 57
+            //     .css("color", "deeppink");
+
+            //콜백함수를 통한 filtering
+
+
+            // $p.filter(function (index, p) {
+            //     console.log(index, p, index % 2 == 0);
+            //     return  index % 2 == 0; //odd:
+            // }).css("color", "deeppink");  $(".wrapper p:contains not('안녕')").css("text-decoration", "line-through");
+            //p태 태그안의 text중 안녕을 제외한 숫자가 짝수인경우만 반환 
+            $p.filter(function (index, wrapper) {
+                    //1. textContent 가져오기
+                    var text = wrapper.innerHTML;
+                    //replace() 메서드는 어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환합니다
+                    //2. 문자열에서 숫자만 추리기: replace
+                    var num = text.replace(/[^\d]/g, ""); // "안녕77" -> "77"
+
+                    //3. 숫자 짝수 여부 리턴하기
+                    return num % 2 == 0;
+                })
+                .css("background-color", "deeppink");
+        }
+    </script>
+    <script>
+        /**
+         * first()
+         * last()
+         * eq(index)
+         * not(selector)
+         */
+        // function test2() {
+        //     var $p = $(".wrapper p");
+        //     console.log($p.first()); // jquery객체리턴
+        //     console.log($p.last());
+        //     console.log($p.eq(6));
+        //     console.log($p[0]); // javascript태그객체
+
+        //     // $p.first()
+        //     $p.first()
+        //         .css("font-size", "2em")
+        //         .css("color", "deeppink");
+        //     // $p.first()
+        //     $p.last()
+        //         .css("font-size", "2em")
+        //         .css("color", "springgreen");
+
+        //     $p.eq(6)
+        //         .css("font-size", "2em")
+        //         .css("color", "blue");
+        //     $p.not(".test")
+        //         .css("font-size", "2em")
+        //         .css("color", "springgreen");
+        // }
+    </script>
+</body>
+
+</html>
