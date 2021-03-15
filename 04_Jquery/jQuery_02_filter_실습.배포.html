@@ -16,7 +16,7 @@
     <script>
         function checkBtn() {
             //name=check ,type=checkbpx 동일하게 가능
-
+            //체크박스 요소 
             $('[type=checkbox]').filter(':checked').each(function (index, str) {
                 console.log(str.value + '번호');
             });
@@ -38,6 +38,7 @@
         function selectBtn() {
             //.html()은 선택한 요소 안의 내용을 가져오거나, 
             //  .text()와 비슷하지만 태그의 처리가 다릅니다.
+            //라디오 박스 요소
             console.log($("option").filter(":selected").html());
         }
     </script>
