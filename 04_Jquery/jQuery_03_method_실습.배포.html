@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery_03_method_실습</title>
+    <!--최신 jquery cdn 사용하기-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2>Method1</h2>
+    <script>
+        function add() {
+            let $str1 = $("<tr><td>1<td>2<td>3<tr>");
+            let $str2 = $("<tr><td>4<td>5<td>6<tr>");
+
+            $('table').append($str1);
+            $('table').append($str2);
+        }
+    </script>
+
+    제목 : <input type="text" name="title" /> <br />
+    내용 : <input type="text" name="content" /><br />
+    작성자 : <input type="text" name="owner" /><br /> <br>
+    <input type="button" value="테이블에 추가" onclick="add()" /> <br><br>
+    <table border="1">
+        <tr class="table">
+            <td> 제목 </td>
+            <td> 내용 </td>
+            <td> 작성자 </td>
+        </tr>
+    </table>
+
+    <h2>Method2</h2>
+    <script>
+        //insertAfter 뒤에 추가요소 
+        //insertBefore  지정한 요소 시작 부분에 내용을 삽입
+        //.clone()은 선택한 요소를 복제합니다  
+
+        function addFile() {
+            var $str = $("input[name=f0]").clone();
+            $str.insertAfter($("div"));
+
+        }
+        //last-child 
+        function delFile() {
+            $("input[name=f0]:last-child").remove();
+        }
+    </script>
+
+    <div>
+        <input type="file" name="f0" /> &nbsp;&nbsp;
+        <input type="button" value="추가" onclick="addFile()" />&nbsp;
+        <input type="button" value="삭제" onclick="delFile()" />
+    </div>
+
+</body>
+
+</html>

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery_02_filter_실습</title>
-    <!--최신 jquery cdn 사용하기-->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
 </head>
 
 <body>
@@ -15,11 +14,11 @@
 
     <script>
         function checkBtn() {
-            //name=check ,type=checkbpx 동일하게 가능
-            //체크박스 요소 
-            $('[type=checkbox]').filter(':checked').each(function (index, str) {
-                console.log(str.value + '번호');
-            });
+            var check = $("input").filter("input:checked");
+            for (var index = 0; index < check.length; index++) {
+                console.log(check[index].value + "번");
+            }
+            console.log(check);
         }
     </script>
 
@@ -35,10 +34,8 @@
     <h2>Filter2</h2>
     <script>
         function selectBtn() {
-            //.html()은 선택한 요소 안의 내용을 가져오거나, 
-            //  .text()와 비슷하지만 태그의 처리가 다릅니다.
-            //라디오 박스 요소
-            console.log($("option").filter(":selected").html());
+            var check = $("option").filter("option:selected");
+            console.log(check.text());
         }
     </script>
 
